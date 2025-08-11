@@ -1,334 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google Font: Tajawal -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-      crossorigin="anonymous"
-    />
+  <!-- Google Font: Tajawal -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-    <title>Nova Arkan</title>
-  </head>
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <body>
-    <!--nav-->
+  <title>Nova Arkan</title>
+</head>
 
-    <nav class="custom-navbar">
-      <div
-        class="custom-container container d-flex justify-content-between align-items-center"
-      >
-        <!-- الشعار -->
-        <a class="custom-brand navbar-brand" href="./home.html">
-          <img src="./assets/images/ArkanLogo.svg" alt="logo" />
-        </a>
+<body>
+  <!--nav-->
 
-        <!-- زر فتح القائمة الجانبية (للجوال) -->
-        <button
-          class="btn burger-btn d-lg-none"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#mobileMenu"
-          aria-controls="mobileMenu"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="currentColor"
-            class="bi bi-list"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M2.5 12.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z"
-            />
-          </svg>
-        </button>
-        <ul class="nav-links navbar-nav flex-row gap-4">
-          <li class="nav-item">
-            <a class="nav-link activepg" href="./about.html">من نحن</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./services.html">خدماتنا</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./projects.html">تخصاصتنا</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./blog.html">مشاريعنا</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./clients.html">عملاؤنا</a>
-          </li>
-        </ul>
-        <!-- القائمة الكاملة على الشاشات الكبيرة -->
-        <div class="d-none d-lg-flex align-items-center">
-          <a href="./contactus.html" class="btn-contact">تواصل معنا</a>
+  <nav class="custom-navbar">
+    <div class="custom-container container d-flex justify-content-between align-items-center">
+      <!-- الشعار -->
+      <a class="custom-brand navbar-brand" href="./home.html">
+        <img src="./assets/images/ArkanLogo.svg" alt="logo" />
+      </a>
+
+      <!-- زر فتح القائمة الجانبية (للجوال) -->
+      <button class="btn burger-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+        aria-controls="mobileMenu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.5 12.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-4a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z" />
+        </svg>
+      </button>
+      <ul class="nav-links navbar-nav flex-row gap-4">
+        <li class="nav-item">
+          <a class="nav-link activepg" href="./about.html">من نحن</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./services.html">خدماتنا</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./projects.html">تخصاصتنا</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./blog.html">مشاريعنا</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./clients.html">عملاؤنا</a>
+        </li>
+      </ul>
+      <!-- القائمة الكاملة على الشاشات الكبيرة -->
+      <div class="d-none d-lg-flex align-items-center">
+        <a href="./contactus.html" class="btn-contact">تواصل معنا</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- القائمة الجانبية (Offcanvas Menu) -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header">
+      <img class="offcanvas-title" src="./assets/images/ArkanLogo.svg" id="mobileMenuLabel" />
+      <button class="close-btn btn" data-bs-dismiss="offcanvas" aria-label="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="nav-links navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link activepg" href="./about.html">من نحن</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./services.html">خدماتنا</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./projects.html">تخصاصتنا</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./blog.html">مشاريعنا</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./clients.html">عملاؤنا</a>
+        </li>
+      </ul>
+      <hr />
+      <div class="language-switch d-flex flex-column gap-2 mt-3">
+        <a href="./contactus.html" class="btn-contact btn btn-outline-primary mt-2">تواصل معنا</a>
+      </div>
+    </div>
+  </div>
+  <!--nav end-->
+  <main>
+    <div class="hero-section">
+      <div class="hero-content container">
+        <div class="welcome-text">
+          حياكم الله في نوفا أركان <span class="divider">///</span>
         </div>
-      </div>
-    </nav>
+        <h1 class="hero-title">
+          لا نبني تحت الأرض فقط<br />نمهد فوقها طريق المستقبل.
+        </h1>
 
-    <!-- القائمة الجانبية (Offcanvas Menu) -->
-    <div
-      class="offcanvas offcanvas-start"
-      tabindex="-1"
-      id="mobileMenu"
-      aria-labelledby="mobileMenuLabel"
-    >
-      <div class="offcanvas-header">
-        <img
-          class="offcanvas-title"
-          src="./assets/images/ArkanLogo.svg"
-          id="mobileMenuLabel"
-        />
-        <button
-          class="close-btn btn"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        >
-          <i class="fa-solid fa-xmark"></i>
+        <button class="scroll-down-circle">
+          <span class="scroll-text">تحرك لأسفل</span>
+          <span class="arrow">&#8595;</span>
         </button>
       </div>
-      <div class="offcanvas-body">
-        <ul class="nav-links navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link activepg" href="./about.html">من نحن</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./services.html">خدماتنا</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./projects.html">تخصاصتنا</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./blog.html">مشاريعنا</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./clients.html">عملاؤنا</a>
-          </li>
-        </ul>
-        <hr />
-        <div class="language-switch d-flex flex-column gap-2 mt-3">
-          <a
-            href="./contactus.html"
-            class="btn-contact btn btn-outline-primary mt-2"
-            >تواصل معنا</a
-          >
+      <div class="hero-squre-left">
+        <div class="high-squre"></div>
+        <div class="midlle-squre"></div>
+        <div class="low-squre"></div>
+      </div>
+    </div>
+    <div class="about">
+      <div class="hero-squre">
+        <div class="skew-stripe"></div>
+      </div>
+    </div>
+  </main>
+
+  <section class="about-sec">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="about-right">
+            <h2><span class="divider">///</span>من نحن</h2>
+            <h3>نرى في البنية التحتية قلباً نابضاً لكل حضارة.</h3>
+            <p>
+              لم نأتِ لنكون مجرد شركة مقاولات، بل لنكون ركيزة تُسهم في تأسيس
+              ما لا يُرى، لكنه أساس كل شيء.بدأنا رحلتنا في مايو 2020، بخطوات
+              واثقة ورؤية عميقة، ندرك أن أقوى البُنى تبدأ من تحت الأرض وتعلو
+              حتى تصنع الفرق. كانت انطلاقتنا الأولى تحت اسم M D للمقاولات،
+              نُنفّذ أعمال البناء العام والديكور، ونبني سُمعة تتّسع من مشروع
+              لآخر.ومع الوقت، أدركنا أن القيمة الحقيقية تكمن في المشاريع التي
+              تدعم استقرار المدن وتقدّمها ... وهنا وُلد التحول.في يونيو 2025،
+              أعدنا تقديم أنفسنا بهوية جديدة: نوفا أركان - شركة تُؤمن أن
+              البنية التحتية قلب نابض لكل حضارة.نُنفّذ شبكات الحُفَر، والمياه،
+              والصرف، والإنارة، وكأننا نخطّ الحياة للمستقبل.في كل مشروع، نُؤمن
+              أن الإتقان ليس رفاهية، وأن السلامة ليست إجراء، بل التزام ،وأن
+              الزمن في عالم البنية التحتية يُقاس بالدقة ويُحسب بالساعات.نحن
+              نوقّع عقود البنية التحتية اليوم، لنصنع بنية تدوم، وشراكة هوية
+              للأمد.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 about-left">
+          <div class="about-images">
+            <img src="./assets/images/Group 11.png" alt="" class="up-image" />
+            <img src="./assets/images/Vector 3.png" alt="" class="middle-image" />
+            <img src="./assets/images/Vector 2.png" alt="" class="bottom-img" />
+          </div>
         </div>
       </div>
     </div>
-    <!--nav end-->
-    <main>
-      <div class="hero-section">
-        <div class="hero-content container">
-          <div class="welcome-text">
-            حياكم الله في نوفا أركان <span class="divider">///</span>
-          </div>
-          <h1 class="hero-title">
-            لا نبني تحت الأرض فقط<br />نمهد فوقها طريق المستقبل.
-          </h1>
-
-          <button class="scroll-down-circle">
-            <span class="scroll-text">تحرك لأسفل</span>
-            <span class="arrow">&#8595;</span>
-          </button>
-        </div>
-        <div class="hero-squre-left">
-          <div class="high-squre"></div>
-          <div class="midlle-squre"></div>
-          <div class="low-squre"></div>
-        </div>
-      </div>
-      <div class="about">
-        <div class="hero-squre">
-          <div class="skew-stripe"></div>
-        </div>
-      </div>
-    </main>
-
-    <section class="about-sec">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <div class="about-right">
-              <h2><span class="divider">///</span>من نحن</h2>
-              <h3>نرى في البنية التحتية قلباً نابضاً لكل حضارة.</h3>
-              <p>
-                لم نأتِ لنكون مجرد شركة مقاولات، بل لنكون ركيزة تُسهم في تأسيس
-                ما لا يُرى، لكنه أساس كل شيء.بدأنا رحلتنا في مايو 2020، بخطوات
-                واثقة ورؤية عميقة، ندرك أن أقوى البُنى تبدأ من تحت الأرض وتعلو
-                حتى تصنع الفرق. كانت انطلاقتنا الأولى تحت اسم M D للمقاولات،
-                نُنفّذ أعمال البناء العام والديكور، ونبني سُمعة تتّسع من مشروع
-                لآخر.ومع الوقت، أدركنا أن القيمة الحقيقية تكمن في المشاريع التي
-                تدعم استقرار المدن وتقدّمها ... وهنا وُلد التحول.في يونيو 2025،
-                أعدنا تقديم أنفسنا بهوية جديدة: نوفا أركان - شركة تُؤمن أن
-                البنية التحتية قلب نابض لكل حضارة.نُنفّذ شبكات الحُفَر، والمياه،
-                والصرف، والإنارة، وكأننا نخطّ الحياة للمستقبل.في كل مشروع، نُؤمن
-                أن الإتقان ليس رفاهية، وأن السلامة ليست إجراء، بل التزام ،وأن
-                الزمن في عالم البنية التحتية يُقاس بالدقة ويُحسب بالساعات.نحن
-                نوقّع عقود البنية التحتية اليوم، لنصنع بنية تدوم، وشراكة هوية
-                للأمد.
-              </p>
+  </section>
+  <section class="values-sec py-5">
+    <div class="container">
+      <div class="row value-cards text-center">
+        <div class="col-md-4">
+          <div class="value-card">
+            <div class="value-header">
+              <i class="icon"><img src="./assets/images/Group (1).png" alt="" /></i>
+              <span class="card-name">قيمنا</span>
             </div>
-          </div>
-          <div class="col-md-6 about-left">
-            <div class="about-images">
-              <img src="./assets/images/Group 11.png" alt="" class="up-image" />
-              <img
-                src="./assets/images/Vector 3.png"
-                alt=""
-                class="middle-image"
-              />
-              <img
-                src="./assets/images/Vector 2.png"
-                alt=""
-                class="bottom-img"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="values-sec py-5">
-      <div class="container">
-        <div class="row value-cards text-center">
-          <div class="col-md-4">
-            <div class="value-card">
-              <div class="value-header">
-                <i class="icon"
-                  ><img src="./assets/images/Group (1).png" alt=""
-                /></i>
-                <span class="card-name">قيمنا</span>
-              </div>
-              <p class="value-p">
-                .الإلتزام .ننجز في الموعد ، لا تأخير .الشفافية .السالمة .الجودة
-                .التطوير المستمر
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="value-card">
-              <div class="value-header">
-                <i class="icon"
-                  ><img src="./assets/images/Group.png" alt=""
-                /></i>
-                <span class="card-name">رؤيتنا</span>
-              </div>
-              <p class="value-p">
-                تنفيذ المشاريع الإنشائية باحترافية عالية وتنفيذ مشاريع البنية
-                التحتية والظهور العمراني وفق أعلى المعايير الفنية، وتسليم أعمال
-                تجسد الثقة والدقة.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="value-card">
-              <div class="value-header">
-                <i class="icon"
-                  ><img src="./assets/images/svgexport-15 (2) 1.png" alt=""
-                /></i>
-                <span class="card-name">رسالتنا</span>
-              </div>
-              <p class="value-p">
-                أن نكون من رواد قطاع الإنشاءات في المملكة، شركاء في بناء مستقبل
-                مستدام ومعتمد على الجودة والكفاءة.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- HTML -->
-    <section class="growth-expansion py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <h2 class="growth-expansion-title">النمو والتوسع</h2>
-            <h3 class="growth-expansion-years">2021-2024</h3>
-            <p class="growth-expansion-para">
-              تنفيذ عدد من المشاريع في مجال البنية التحتية والتطوير العمراني في
-              عدة مناطق داخل المملكة. اكتساب ثقة السوق من خلال الالتزام بالجودة
-              والدقة بناء سمعة قوية في السوق المحلي والخليجي
+            <p class="value-p">
+              .الإلتزام .ننجز في الموعد ، لا تأخير .الشفافية .السالمة .الجودة
+              .التطوير المستمر
             </p>
           </div>
+        </div>
 
-          <div class="col-md-8">
-            <div class="left-growth-expansion row">
-              <div class="col-md-4">
-                <div class="div-right">
-                  <strong class="div-tit">النمو والتوسع</strong>
-                  <p>
-                    <span>يونيو</span> <br />
-                    <strong class="div-year">2025</strong>
-                  </p>
-                </div>
+        <div class="col-md-4">
+          <div class="value-card">
+            <div class="value-header">
+              <i class="icon"><img src="./assets/images/Group.png" alt="" /></i>
+              <span class="card-name">رؤيتنا</span>
+            </div>
+            <p class="value-p">
+              تنفيذ المشاريع الإنشائية باحترافية عالية وتنفيذ مشاريع البنية
+              التحتية والظهور العمراني وفق أعلى المعايير الفنية، وتسليم أعمال
+              تجسد الثقة والدقة.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="value-card">
+            <div class="value-header">
+              <i class="icon"><img src="./assets/images/svgexport-15 (2) 1.png" alt="" /></i>
+              <span class="card-name">رسالتنا</span>
+            </div>
+            <p class="value-p">
+              أن نكون من رواد قطاع الإنشاءات في المملكة، شركاء في بناء مستقبل
+              مستدام ومعتمد على الجودة والكفاءة.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- HTML -->
+  <section class="growth-expansion py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2 class="growth-expansion-title">النمو والتوسع</h2>
+          <h3 class="growth-expansion-years">2021-2024</h3>
+          <p class="growth-expansion-para">
+            تنفيذ عدد من المشاريع في مجال البنية التحتية والتطوير العمراني في
+            عدة مناطق داخل المملكة. اكتساب ثقة السوق من خلال الالتزام بالجودة
+            والدقة بناء سمعة قوية في السوق المحلي والخليجي
+          </p>
+        </div>
+
+        <div class="col-md-8">
+          <div class="left-growth-expansion row">
+            <div class="col-md-4">
+              <div class="div-right">
+                <strong class="div-tit">النمو والتوسع</strong>
+                <p>
+                  <span>يونيو</span> <br />
+                  <strong class="div-year">2025</strong>
+                </p>
               </div>
-              <div class="col-md-4">
-                <div class="div-center">
-                  <strong class="div-tit">النمو والتوسع</strong>
-                  <p>
-                    <strong class="div-year">2024 <br> - <br> 2021</strong>
-                  </p>
-                </div>
+            </div>
+            <div class="col-md-4">
+              <div class="div-center">
+                <strong class="div-tit">النمو والتوسع</strong>
+                <p>
+                  <strong class="div-year">2024 <br />
+                    - <br />
+                    2021</strong>
+                </p>
               </div>
-              <div class="col-md-4">
-                <div class="div-left">
-                  <strong class="div-tit">الانطلاق بهوية جديدة</strong>
-                  <p>2020</p>
-                </div>
+            </div>
+            <div class="col-md-4">
+              <div class="div-left">
+                <strong class="div-tit">الانطلاق بهوية جديدة</strong>
+                <p>2020</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <section class="services-section">
-      <div class="container">
-        <div class="serv-header">
-          <div class="serv-intro">
-            <span class="serv-divider">///</span>خدماتنا<span
-              class="serv-divider">///</span>
-          </div>
-          <p class="serv-para">نرى في البنية التحتية قلباً نابضاً لكل حضارة.</p>
+    </div>
+  </section>
+  <section class="services-container">
+    <img class="img-serv-top" src="./assets/images/Group 11.png" alt="" />
+    <div class="container">
+      <div class="serv-header">
+        <img src="./assets/images/Path 32.png" alt="" class="intro-img" />
+        <div class="serv-intro">
+          <span class="serv-divider">///</span>خدماتنا<span class="serv-divider">///</span>
+        </div>
+        <p class="serv-para">نرى في البنية التحتية قلباً نابضاً لكل حضارة.</p>
+      </div>
+      <!-- Top Services Grid -->
+
+      <div class="services-grid">
+        <div class="service-card" data-service="mechanical">
+          <span class="service-icon"><img src="./assets/images/svgexport-15 (3) 1.png" alt="" /></span>
+          <h3 class="service-title">الإنشاءات المدنية</h3>
+          <p class="service-description">
+            ننـفذ مشاريـع الإنشـاءات المدنيـة وعمليـات التـأهيل والترميم
+            للمباني باحترافية عالية و وفق إطار زمني محدد
+          </p>
+        </div>
+
+        <div class="service-card featured" data-service="electrical">
+          <span class="service-icon"><img src="./assets/images/svgexport-15 (4) 1.png" /></span>
+          <h3 class="service-title">أعمال الكهرباء</h3>
+          <p class="service-description">
+            نقدم خدمات كهربائية متكاملة لمباشرة إنتاج من العقد المؤهل والخدد
+            الكهربائي إلى الحد الكهربائي والدكتين وصيانة وتحديد الأنظمة
+            الكهربائية الحالية
+          </p>
+        </div>
+
+        <div class="service-card" data-service="construction">
+          <span class="service-icon"><img src="./assets/images/svgexport-15 (5) 1.png" /></span>
+          <h3 class="service-title">الأعمال الميكانيكية</h3>
+          <p class="service-description">
+            تقدم كافة الأعمال الميكانيكية، بما يتضمن التصميم والتركيب والخدمة
+            اللازمة لتشغيل المرافق الصناعية والتجارية
+          </p>
         </div>
       </div>
-    </section>
-    <!--whats-->
-    <a href="#" class="whats-button" target="_blank" rel="noopener noreferrer">
-      <svg
-        class="whats-icon"
-        width="28"
-        height="28"
-        viewBox="0 0 28 28"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M8.22278 24.4482C9.992 25.4304 11.9825 25.9452 14.0061 25.9437C20.6008 25.9437 25.9439 20.5886 25.9439 13.994C25.9439 7.39934 20.6008 2.05621 14.0061 2.05621C7.41146 2.05621 2.0564 7.39934 2.0564 13.994C2.0564 16.1149 2.61263 18.0856 3.57496 19.8123L2.0564 25.9437L8.22278 24.4482ZM8.8831 8.72083C9.02221 8.59066 9.19086 8.49624 9.37455 8.44571C9.55824 8.39518 9.75145 8.39005 9.93757 8.43076L10.3206 8.51181C10.7028 8.59286 11.0159 8.84794 11.1661 9.19602L11.9194 10.8647C12.0108 11.0654 12.0419 11.2884 12.0091 11.5064C11.9762 11.7245 11.8807 11.9284 11.7342 12.0932L11.271 12.6384C11.1956 12.7269 11.1486 12.8361 11.1361 12.9518C11.1236 13.0674 11.1463 13.1841 11.201 13.2868C12.5686 15.7438 14.3653 16.544 15.1647 16.7871C15.2798 16.8243 15.4042 16.8218 15.5178 16.7799C15.6313 16.7379 15.7275 16.6591 15.7909 16.5559L16.127 16.0338C16.4512 15.5356 17.0893 15.3616 17.7957 15.7096L19.1863 16.4049C19.7204 16.66 19.9626 17.2853 19.7664 17.8424C19.0592 19.8934 17.2514 19.6383 17.2514 19.6383C13.2417 19.5342 10.0997 15.8367 8.74404 13.936C8.11785 13.0436 7.73565 11.9653 7.85168 10.8647C7.9677 9.77529 8.47702 9.09108 8.8831 8.72083Z"
-          fill="white"
-        />
-      </svg>
 
-      <!--whats-->
-    </a>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      <!-- Connection Line -->
+
+      <!-- Detailed Services Section -->
+      <div class="detailed-services">
+        <div class="connection-line"></div>
+        <div class="services-columns">
+          <div class="service-column">
+            <ul>
+              <li>الخدمات الإنشائية</li>
+              <li>أعمال البناء والتشطيبات الخارجية</li>
+              <li>أعمال التعريف</li>
+            </ul>
+          </div>
+
+          <div class="service-column">
+            <ul>
+              <li>أعمال البنية التحتية</li>
+              <li>تسليمات المعادن والمعدات</li>
+              <li>أعمال الطلاء والتسليم</li>
+            </ul>
+          </div>
+
+          <div class="service-column">
+            <ul>
+              <li>أعمال النظافة والترميم</li>
+              <li>أعمال تركيب الحديد</li>
+              <li>أعمال البناء والتشطيبات الداخلية</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" data-service="communications">
+          <span class="service-icon"><img src="./assets/images/Group2.png" /></span>
+          <h3 class="service-title">أعمال الاتصالات</h3>
+          <p class="service-description">
+            ننفذ مشاريع الإنشاءات المدنية وعمليات التشييد والترميم للمباني
+            بطرق علمية ووفق أطار زمني محدد
+          </p>
+        </div>
+
+        <div class="service-card" data-service="evaluation">
+          <span class="service-icon"><img src="./assets/images/svgexport-15 (7) 1.png" /></span>
+          <h3 class="service-title">أعمال الترميم</h3>
+          <p class="service-description">
+            نقدم خدمات كهربائية متكاملة لمباشرة إنتاج من العقد المؤهل والخدد
+            الكهربائي إلى الحد الكهربائي والدكتين وصيانة وتحديد الأنظمة
+            الكهربائية الحالية
+          </p>
+        </div>
+        <div class="service-card" data-service="maintenance">
+          <span class="service-icon"><i class="fas fa-tools" style="font-size: 40px; color: white"></i></span>
+          <h3 class="service-title">الصيانة والتركيب</h3>
+          <p class="service-description">
+            نقدم خدمة الصيانة الميكانيكية بما يتضمن التصميم والتركيب والصيانة
+            الدورية لتشغيل المعايير الصناعية والتجارية
+          </p>
+        </div>
+      </div>
+    </div>
+    <img class="img-serv-bottom" src="./assets/images/Group 11.png" alt="" />
+    <div class="serv-skew"></div>
+  </section>
+  <section class="projects-sec">
+    <div class="container">
+      <div class="proj-header">
+        <div class="proj-intro">
+          <span class="proj-divider">///</span>مشاريعنا<span class="proj-divider">///</span>
+        </div>
+        <h3 class="proj-para">سابقة أعمالنا</h3>
+      </div>
+      <div class="swiper-container">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide swiper-slide-active">
+            <picture>
+              <img srcset="./assets/images/project1.png" alt="Example" />
+            </picture>
+          </li>
+          <li class="swiper-slide">
+            <picture>
+              <img srcset="./assets/images/project1.png" alt="Example" />
+            </picture>
+          </li>
+          <li class="swiper-slide">
+            <picture>
+              <img srcset="./assets/images/project1.png" alt="Example" />
+            </picture>
+          </li>
+          <li class="swiper-slide">
+            <picture>
+              <img srcset="./assets/images/project1.png" alt="Example" />
+            </picture>
+          </li>
+          <li class="swiper-slide">
+            <picture>
+              <img srcset="./assets/images/project1.png" alt="Example" />
+            </picture>
+          </li>
+        </ul>
+        <div class="swiper-pagination">
+        </div>
+        <div class="swiper-button-prev">
+        </div>
+        <div class="swiper-button-next">
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="clients-sec">
+      <div class="clients-header">
+        <div class="clients-intro">
+          <span class="clients-divider">///</span>عملاؤنا<span class="clients-divider">///</span>
+        </div>
+        <h3 class="clients-para">شركاء النجاح </h3>
+      </div>
+      <div class="swiper swiper_clients mySwiper_clients">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./assets/images/Spotify.png" alt="Spotify"></div>
+          <div class="swiper-slide"><img src="./assets/images/google.png" alt="Google"></div>
+          <div class="swiper-slide"><img src="./assets/images/pintrest.png" alt="Pintrest"></div>
+          <div class="swiper-slide"><img src="./assets/images/stripe.png" alt="Stripe"></div>
+          <div class="swiper-slide"><img src="./assets/images/reddit.png" alt="Reddit"></div>
+          <div class="swiper-slide"><img src="./assets/images/Spotify.png" alt="Spotify"></div>
+          <div class="swiper-slide"><img src="./assets/images/google.png" alt="Google"></div>
+          <div class="swiper-slide"><img src="./assets/images/pintrest.png" alt="Pintrest"></div>
+          <div class="swiper-slide"><img src="./assets/images/stripe.png" alt="Stripe"></div>
+          <div class="swiper-slide"><img src="./assets/images/reddit.png" alt="Reddit"></div>
+        </div>
+      </div>
+  </section>
+  <!--whats-->
+  <a href="#" class="whats-button" target="_blank" rel="noopener noreferrer">
+    <svg class="whats-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M8.22278 24.4482C9.992 25.4304 11.9825 25.9452 14.0061 25.9437C20.6008 25.9437 25.9439 20.5886 25.9439 13.994C25.9439 7.39934 20.6008 2.05621 14.0061 2.05621C7.41146 2.05621 2.0564 7.39934 2.0564 13.994C2.0564 16.1149 2.61263 18.0856 3.57496 19.8123L2.0564 25.9437L8.22278 24.4482ZM8.8831 8.72083C9.02221 8.59066 9.19086 8.49624 9.37455 8.44571C9.55824 8.39518 9.75145 8.39005 9.93757 8.43076L10.3206 8.51181C10.7028 8.59286 11.0159 8.84794 11.1661 9.19602L11.9194 10.8647C12.0108 11.0654 12.0419 11.2884 12.0091 11.5064C11.9762 11.7245 11.8807 11.9284 11.7342 12.0932L11.271 12.6384C11.1956 12.7269 11.1486 12.8361 11.1361 12.9518C11.1236 13.0674 11.1463 13.1841 11.201 13.2868C12.5686 15.7438 14.3653 16.544 15.1647 16.7871C15.2798 16.8243 15.4042 16.8218 15.5178 16.7799C15.6313 16.7379 15.7275 16.6591 15.7909 16.5559L16.127 16.0338C16.4512 15.5356 17.0893 15.3616 17.7957 15.7096L19.1863 16.4049C19.7204 16.66 19.9626 17.2853 19.7664 17.8424C19.0592 19.8934 17.2514 19.6383 17.2514 19.6383C13.2417 19.5342 10.0997 15.8367 8.74404 13.936C8.11785 13.0436 7.73565 11.9653 7.85168 10.8647C7.9677 9.77529 8.47702 9.09108 8.8831 8.72083Z"
+        fill="white" />
+    </svg>
+
+    <!--whats-->
+  </a>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+  <script src="./js/script.js"></script>
+</body>
+
 </html>
