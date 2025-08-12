@@ -104,10 +104,10 @@ setInterval(createParticle, 2000);
       nextEl: ".swiper-button-next", 
       prevEl: ".swiper-button-prev", 
     }, 
-    pagination: { 
-      el: ".swiper-pagination", 
-      type: "fraction", 
-    }
+    pagination: {
+    el: ".swiper-proj-pagination",
+    clickable: true
+  }
   });
  var swiperClients = new Swiper(".mySwiper_clients", { 
     slidesPerView: 5, 
@@ -122,4 +122,5 @@ setInterval(createParticle, 2000);
       768: { slidesPerView: 3 }, 
       1024: { slidesPerView: 5 }, 
     }
+   
   });
