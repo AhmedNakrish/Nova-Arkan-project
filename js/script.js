@@ -1,4 +1,57 @@
-// Add interactive animations
+  // Initialize Swiper
+        const swiper = new Swiper('.swiper-hero', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            speed: 1000,
+
+            // Pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            // Responsive breakpoints
+            breakpoints: {
+                320: {
+                    direction: 'horizontal',
+                },
+                768: {
+                    direction: 'horizontal',
+                },
+                1024: {
+                    direction: 'horizontal',
+                }
+            }
+        });
+
+        // Pause autoplay on hover
+        const swiperContainer = document.querySelector('.swiper');
+        swiperContainer.addEventListener('mouseenter', () => {
+            swiper.autoplay.stop();
+        });
+
+        swiperContainer.addEventListener('mouseleave', () => {
+            swiper.autoplay.start();
+        });
+
+        // Scroll down button functionality
+        document.querySelectorAll('.scroll-down-circle').forEach(button => {
+            button.addEventListener('click', () => {
+                window.scrollTo({
+                    top: window.innerHeight,
+                    behavior: 'smooth'
+                });
+            });
+        });// Add interactive animations
 document.addEventListener("DOMContentLoaded", function () {
   const serviceCards = document.querySelectorAll(".service-card");
   const serviceItems = document.querySelectorAll(".service-column li");
@@ -124,3 +177,5 @@ setInterval(createParticle, 2000);
     }
    
   });
+
+
