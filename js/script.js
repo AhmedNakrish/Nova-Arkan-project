@@ -1,4 +1,5 @@
-  // Initialize Swiper
+   AOS.init();
+ // Initialize Swiper
         const swiper = new Swiper('.swiper-hero', {
             // Optional parameters
             direction: 'horizontal',
