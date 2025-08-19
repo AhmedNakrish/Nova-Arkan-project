@@ -1670,7 +1670,7 @@ button.close-btn.btn {
     }
 
     .left-growth-expansion {
-        display: none;
+        display: none !important;
     }
 
     .mobile-left-growth-expansion {
@@ -2375,11 +2375,7 @@ button.close-btn.btn {
         pointer-events: none;
     }
 
-    .left-growth-expansion {
-        background: url(../assets/images/left-growth-expansion.png) no-repeat;
-        background-size: 100%;
-        height: 441px;
-    }
+     
 
     .left-growth-expansion strong {
         font-size: 11px;
@@ -2679,11 +2675,7 @@ button.close-btn.btn {
         font-size: 19px;
     }
 
-    .left-growth-expansion {
-        background: url(../assets/images/left-growth-expansion.png) no-repeat;
-        background-size: 100%;
-        height: 330px;
-    }
+   
 
     .up-left,
     .middle-left,
