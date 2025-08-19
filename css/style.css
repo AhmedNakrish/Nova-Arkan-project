@@ -1025,6 +1025,7 @@ div#mobileMenu {
     align-items: center;
     justify-content: center;
     gap: 40px;
+    padding-bottom: 20px;
 }
 
 .proj-intro {
@@ -1688,10 +1689,10 @@ button.close-btn.btn {
             z-index: 0;
         }
 
-        .col-md-4 {
+       /* .col-md-4 {
             position: relative;
             z-index: 1;
-        }
+        }*/
 
         .mobile-left-growth-cont {
             display: flex;
@@ -1711,7 +1712,6 @@ button.close-btn.btn {
             text-align: center;
             font-weight: bold;
             background: white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             position: relative;
             z-index: 2;
         }
@@ -1796,6 +1796,7 @@ button.close-btn.btn {
         .date-cont:hover {
             transform: scale(1.1);
             transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1)
         }
 
         .up-left:hover,
@@ -2190,6 +2191,7 @@ button.close-btn.btn {
         width: fit-content;
         margin: unset;
         margin-left: auto;
+        padding-top: 20px;
     }
     .footer-img {
     border-left: 1px solid #FFFFFF1A;
