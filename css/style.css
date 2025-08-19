@@ -1857,6 +1857,13 @@ button.close-btn.btn {
         filter: grayscale(1);
         width: 900px;
     }
+    button.close-btn.btn {
+    background-color: var(--secondry-color);
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 }
 
 @media(max-width:944px) {
