@@ -80,6 +80,8 @@ ul {
     color: var(--fifth-color);
 }
 
+
+
 .custom-navbar .btn-contact {
     width: 154px;
     height: 50px;
@@ -1210,6 +1212,22 @@ proj-sec .swiper-pagination-bullet {
     right: 0;
     pointer-events: none;
 }
+.mobil-menu .nav-link{
+    transition: all .3s ease;
+}
+.mobil-menu .nav-link:hover {
+            color: var(--primary-color);
+            padding-right: 10px;
+            transform: translateX(-5px);
+        }
+.mobil-menu .contact-us:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+            color: white;
+        }
+.mobil-menu .contact-us{
+    transition: all .3s ease;
+}     
 
 iframe.loc-frame {
     filter: grayscale(1);
@@ -1428,7 +1446,6 @@ a.footer-social-link {
 }
 
 
-
 span.swiper-pagination-bullet {
     background-color: #c57a387e;
 }
@@ -1446,15 +1463,20 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     padding-top: 20px;
 }
 
-a.btn-contact.btn.menu-btn-contact.mt-2 {
+a.btn-contact.btn.menu-btn-contact {
     color: var(--white-color);
 }
 
 button.close-btn.btn {
     background-color: var(--secondry-color);
     color: var(--white-color);
+     transition: all 0.3s ease; 
 }
-
+button.close-btn.btn:hover{
+    transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+            color: white;
+}
 .contact-us {
     background-color: var(--secondry-color);
 }
