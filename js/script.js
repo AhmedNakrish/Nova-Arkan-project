@@ -567,7 +567,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const bsOffcanvas = bootstrap.Offcanvas.getOrCreateInstance(offcanvasElement);
 
     // كل الروابط جوا القائمة
-    const navLinks = offcanvasElement.querySelectorAll(".nav-link");
+    const navLinks = offcanvasElement.querySelectorAll(".nav__link");
 
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
