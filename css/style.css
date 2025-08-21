@@ -679,7 +679,9 @@ nav.custom-navbar {
     color: var(--third-color);
     font-weight: bold;
 }
-
+.div-right,.div-center,.div-left{
+    cursor: pointer;
+}
 .div-center {
     display: flex;
     flex-direction: column;

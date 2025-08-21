@@ -1,58 +1,58 @@
-   AOS.init();
- // Initialize Swiper
-        const swiper = new Swiper('.swiper-hero', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            effect: 'fade',
-            fadeEffect: {
-                crossFade: true
-            },
-            speed: 1000,
+AOS.init();
+// Initialize Swiper
+const swiper = new Swiper(".swiper-hero", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+  speed: 1000,
 
-            // Pagination
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
+  // Pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 
-            // Responsive breakpoints
-            breakpoints: {
-                320: {
-                    direction: 'horizontal',
-                },
-                768: {
-                    direction: 'horizontal',
-                },
-                1024: {
-                    direction: 'horizontal',
-                }
-            }
-        });
+  // Responsive breakpoints
+  breakpoints: {
+    320: {
+      direction: "horizontal",
+    },
+    768: {
+      direction: "horizontal",
+    },
+    1024: {
+      direction: "horizontal",
+    },
+  },
+});
 
-        // Pause autoplay on hover
-        const swiperContainer = document.querySelector('.swiper');
-        swiperContainer.addEventListener('mouseenter', () => {
-            swiper.autoplay.stop();
-        });
+// Pause autoplay on hover
+const swiperContainer = document.querySelector(".swiper");
+swiperContainer.addEventListener("mouseenter", () => {
+  swiper.autoplay.stop();
+});
 
-        swiperContainer.addEventListener('mouseleave', () => {
-            swiper.autoplay.start();
-        });
+swiperContainer.addEventListener("mouseleave", () => {
+  swiper.autoplay.start();
+});
 
-        // Scroll down button functionality
-        document.querySelectorAll('.scroll-down-circle').forEach(button => {
-            button.addEventListener('click', () => {
-                window.scrollTo({
-                    top: window.innerHeight,
-                    behavior: 'smooth'
-                });
-            });
-        });// Add interactive animations
+// Scroll down button functionality
+document.querySelectorAll(".scroll-down-circle").forEach((button) => {
+  button.addEventListener("click", () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  });
+}); // Add interactive animations
 document.addEventListener("DOMContentLoaded", function () {
   const serviceCards = document.querySelectorAll(".service-card");
   const serviceItems = document.querySelectorAll(".service-column li");
@@ -151,427 +151,647 @@ function createParticle() {
 // Create particles periodically
 setInterval(createParticle, 2000);
 
- var swiperProjects = new Swiper(".swiper-container", { 
-    slidesPerView: "auto", 
-    spaceBetween: 30, 
-    navigation: { 
-      nextEl: ".swiper-button-next", 
-      prevEl: ".swiper-button-prev", 
-    }, 
-    pagination: {
+var swiperProjects = new Swiper(".swiper-container", {
+  slidesPerView: "auto",
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
     el: ".swiper-proj-pagination",
-    clickable: true
-  }
-  });
- var swiperClients = new Swiper(".mySwiper_clients", { 
-    slidesPerView: 5, 
-    spaceBetween: 20, 
-    loop: true, 
-    autoplay: { 
-      delay: 2000, 
-      disableOnInteraction: false, 
-    }, 
-    breakpoints: { 
-      320: { slidesPerView: 2 }, 
-      768: { slidesPerView: 3 }, 
-      1024: { slidesPerView: 5 }, 
-    }
-   
-  });
+    clickable: true,
+  },
+});
+var swiperClients = new Swiper(".mySwiper_clients", {
+  slidesPerView: 5,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    320: { slidesPerView: 2 },
+    768: { slidesPerView: 3 },
+    1024: { slidesPerView: 5 },
+  },
+});
 
 const serviceDetails = {
-    civil: {
-        title: 'تفاصيل الإنشاءات المدنية',
-        columns: [
-            [
-                'الخدمات الإنشائية',
-                'أعمال البناء والتشطيبات الخارجية',
-                'أعمال التعريف',
-                'تصميم وتنفيذ المباني السكنية'
-            ],
-            [
-                'أعمال البنية التحتية',
-                'تسليمات المعادن والمعدات',
-                'أعمال الطلاء والتسليم',
-                'إنشاء الطرق والجسور'
-            ],
-            [
-                'أعمال النظافة والترميم',
-                'أعمال تركيب الحديد',
-                'أعمال البناء والتشطيبات الداخلية',
-                'مقاولات البناء العامة'
-            ]
-        ]
-    },
-    electrical: {
-        title: 'تفاصيل أعمال الكهرباء',
-        columns: [
-            [
-                'تركيب الأنظمة الكهربائية',
-                'صيانة الشبكات الكهربائية',
-                'تمديد الكابلات الكهربائية',
-                'تركيب اللوحات الكهربائية'
-            ],
-            [
-                'أنظمة الإضاءة الذكية',
-                'أنظمة الطاقة الشمسية',
-                'أنظمة UPS والمولدات',
-                'صيانة المحولات الكهربائية'
-            ],
-            [
-                'اختبار وفحص الأنظمة',
-                'تركيب أنظمة الحماية',
-                'صيانة المعدات الكهربائية',
-                'استشارات هندسية كهربائية'
-            ]
-        ]
-    },
-    mechanical: {
-        title: 'تفاصيل الأعمال الميكانيكية',
-        columns: [
-            [
-                'تركيب أنظمة التكييف',
-                'صيانة المعدات الميكانيكية',
-                'أنظمة السباكة والصرف',
-                'تركيب المصاعد والسلالم المتحركة'
-            ],
-            [
-                'أنظمة التهوية والتبريد',
-                'صيانة المضخات والمحركات',
-                'تركيب الأنابيب والمواسير',
-                'أنظمة مكافحة الحريق'
-            ],
-            [
-                'أعمال الحدادة واللحام',
-                'صيانة الآلات الصناعية',
-                'تصميم وتنفيذ الهياكل المعدنية',
-                'استشارات هندسية ميكانيكية'
-            ]
-        ]
-    },
-    communications: {
-        title: 'تفاصيل أعمال الاتصالات',
-        columns: [
-            [
-                'تركيب شبكات الاتصالات',
-                'أنظمة الألياف البصرية',
-                'شبكات الإنترنت اللاسلكي',
-                'أنظمة المراقبة والأمان'
-            ],
-            [
-                'تركيب أبراج الاتصالات',
-                'صيانة معدات الاتصالات',
-                'أنظمة الصوت والصورة',
-                'شبكات البيانات المتقدمة'
-            ],
-            [
-                'أنظمة الاتصال الداخلي',
-                'تركيب الكاميرات الأمنية',
-                'صيانة الشبكات اللاسلكية',
-                'استشارات تقنية متخصصة'
-            ]
-        ]
-    },
-    renovation: {
-        title: 'تفاصيل أعمال الترميم',
-        columns: [
-            [
-                'ترميم المباني التراثية',
-                'إصلاح التشققات والعيوب',
-                'تجديد الواجهات الخارجية',
-                'ترميم الأسقف والعوازل'
-            ],
-            [
-                'ترميم الأساسات والهياكل',
-                'تجديد الأنظمة القديمة',
-                'إعادة تأهيل المباني',
-                'معالجة مشاكل الرطوبة'
-            ],
-            [
-                'ترميم الزخارف والنقوش',
-                'تجديد الأرضيات والجدران',
-                'إصلاح أضرار الحوادث',
-                'تقييم وفحص المباني'
-            ]
-        ]
-    },
-    maintenance: {
-        title: 'تفاصيل الصيانة والتركيب',
-        columns: [
-            [
-                'الصيانة الدورية للمعدات',
-                'تركيب الأنظمة الجديدة',
-                'صيانة أنظمة التكييف',
-                'خدمات الطوارئ 24/7'
-            ],
-            [
-                'صيانة المصاعد والسلالم',
-                'تركيب أنظمة الأمان',
-                'صيانة الأنظمة الكهربائية',
-                'تطوير وتحديث الأنظمة'
-            ],
-            [
-                'عقود الصيانة الشاملة',
-                'التدريب التقني المتخصص',
-                'قطع الغيار الأصلية',
-                'الضمان الشامل على الأعمال'
-            ]
-        ]
-    }
+  civil: {
+    title: "تفاصيل الإنشاءات المدنية",
+    columns: [
+      [
+        "الخدمات الإنشائية",
+        "أعمال البناء والتشطيبات الخارجية",
+        "أعمال التعريف",
+        "تصميم وتنفيذ المباني السكنية",
+      ],
+      [
+        "أعمال البنية التحتية",
+        "تسليمات المعادن والمعدات",
+        "أعمال الطلاء والتسليم",
+        "إنشاء الطرق والجسور",
+      ],
+      [
+        "أعمال النظافة والترميم",
+        "أعمال تركيب الحديد",
+        "أعمال البناء والتشطيبات الداخلية",
+        "مقاولات البناء العامة",
+      ],
+    ],
+  },
+  electrical: {
+    title: "تفاصيل أعمال الكهرباء",
+    columns: [
+      [
+        "تركيب الأنظمة الكهربائية",
+        "صيانة الشبكات الكهربائية",
+        "تمديد الكابلات الكهربائية",
+        "تركيب اللوحات الكهربائية",
+      ],
+      [
+        "أنظمة الإضاءة الذكية",
+        "أنظمة الطاقة الشمسية",
+        "أنظمة UPS والمولدات",
+        "صيانة المحولات الكهربائية",
+      ],
+      [
+        "اختبار وفحص الأنظمة",
+        "تركيب أنظمة الحماية",
+        "صيانة المعدات الكهربائية",
+        "استشارات هندسية كهربائية",
+      ],
+    ],
+  },
+  mechanical: {
+    title: "تفاصيل الأعمال الميكانيكية",
+    columns: [
+      [
+        "تركيب أنظمة التكييف",
+        "صيانة المعدات الميكانيكية",
+        "أنظمة السباكة والصرف",
+        "تركيب المصاعد والسلالم المتحركة",
+      ],
+      [
+        "أنظمة التهوية والتبريد",
+        "صيانة المضخات والمحركات",
+        "تركيب الأنابيب والمواسير",
+        "أنظمة مكافحة الحريق",
+      ],
+      [
+        "أعمال الحدادة واللحام",
+        "صيانة الآلات الصناعية",
+        "تصميم وتنفيذ الهياكل المعدنية",
+        "استشارات هندسية ميكانيكية",
+      ],
+    ],
+  },
+  communications: {
+    title: "تفاصيل أعمال الاتصالات",
+    columns: [
+      [
+        "تركيب شبكات الاتصالات",
+        "أنظمة الألياف البصرية",
+        "شبكات الإنترنت اللاسلكي",
+        "أنظمة المراقبة والأمان",
+      ],
+      [
+        "تركيب أبراج الاتصالات",
+        "صيانة معدات الاتصالات",
+        "أنظمة الصوت والصورة",
+        "شبكات البيانات المتقدمة",
+      ],
+      [
+        "أنظمة الاتصال الداخلي",
+        "تركيب الكاميرات الأمنية",
+        "صيانة الشبكات اللاسلكية",
+        "استشارات تقنية متخصصة",
+      ],
+    ],
+  },
+  renovation: {
+    title: "تفاصيل أعمال الترميم",
+    columns: [
+      [
+        "ترميم المباني التراثية",
+        "إصلاح التشققات والعيوب",
+        "تجديد الواجهات الخارجية",
+        "ترميم الأسقف والعوازل",
+      ],
+      [
+        "ترميم الأساسات والهياكل",
+        "تجديد الأنظمة القديمة",
+        "إعادة تأهيل المباني",
+        "معالجة مشاكل الرطوبة",
+      ],
+      [
+        "ترميم الزخارف والنقوش",
+        "تجديد الأرضيات والجدران",
+        "إصلاح أضرار الحوادث",
+        "تقييم وفحص المباني",
+      ],
+    ],
+  },
+  maintenance: {
+    title: "تفاصيل الصيانة والتركيب",
+    columns: [
+      [
+        "الصيانة الدورية للمعدات",
+        "تركيب الأنظمة الجديدة",
+        "صيانة أنظمة التكييف",
+        "خدمات الطوارئ 24/7",
+      ],
+      [
+        "صيانة المصاعد والسلالم",
+        "تركيب أنظمة الأمان",
+        "صيانة الأنظمة الكهربائية",
+        "تطوير وتحديث الأنظمة",
+      ],
+      [
+        "عقود الصيانة الشاملة",
+        "التدريب التقني المتخصص",
+        "قطع الغيار الأصلية",
+        "الضمان الشامل على الأعمال",
+      ],
+    ],
+  },
 };
 
 // Get DOM elements
-const serviceCards = document.querySelectorAll('.service-card');
-const detailedServices = document.getElementById('detailed-services');
-const detailedTitle = document.getElementById('detailed-title');
-const servicesColumns = document.getElementById('services-columns');
+const serviceCards = document.querySelectorAll(".service-card");
+const detailedServices = document.getElementById("detailed-services");
+const detailedTitle = document.getElementById("detailed-title");
+const servicesColumns = document.getElementById("services-columns");
 
 let currentActiveService = null;
 
 // Function to show detailed services
 function showDetailedServices(serviceType) {
-    const details = serviceDetails[serviceType];
-    if (!details) return;
+  const details = serviceDetails[serviceType];
+  if (!details) return;
 
-    // Update title
-    detailedTitle.textContent = details.title;
+  // Update title
+  detailedTitle.textContent = details.title;
 
-    // Clear existing columns
-    servicesColumns.innerHTML = '';
+  // Clear existing columns
+  servicesColumns.innerHTML = "";
 
-    // Create columns
-    details.columns.forEach(columnItems => {
-        const column = document.createElement('div');
-        column.className = 'service-column';
-        
-        const ul = document.createElement('ul');
-        columnItems.forEach(item => {
-            const li = document.createElement('li');
-            li.textContent = item;
-            ul.appendChild(li);
-        });
-        
-        column.appendChild(ul);
-        servicesColumns.appendChild(column);
+  // Create columns
+  details.columns.forEach((columnItems) => {
+    const column = document.createElement("div");
+    column.className = "service-column";
+
+    const ul = document.createElement("ul");
+    columnItems.forEach((item) => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      ul.appendChild(li);
     });
 
-    // Show the detailed services section with animation
-    detailedServices.classList.add('show');
-    
-    // Scroll to detailed services section (only if not initial load)
-    if (serviceType !== 'civil' || currentActiveService !== null) {
-        setTimeout(() => {
-            detailedServices.scrollIntoView({ 
-                behavior: 'smooth', 
-                block: 'center' 
-            });
-        }, 200);
-    }
+    column.appendChild(ul);
+    servicesColumns.appendChild(column);
+  });
+
+  // Show the detailed services section with animation
+  detailedServices.classList.add("show");
+
+  // Scroll to detailed services section (only if not initial load)
+  if (serviceType !== "civil" || currentActiveService !== null) {
+    setTimeout(() => {
+      detailedServices.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }, 200);
+  }
 }
 
 // Function to hide detailed services
 function hideDetailedServices() {
-    detailedServices.classList.remove('show');
-    currentActiveService = null;
-    
-    // Remove active class from all cards
-    serviceCards.forEach(card => {
-        card.classList.remove('active');
-    });
+  detailedServices.classList.remove("show");
+  currentActiveService = null;
+
+  // Remove active class from all cards
+  serviceCards.forEach((card) => {
+    card.classList.remove("active");
+  });
 }
 
 // Function to set default service
 function setDefaultService() {
-    const defaultServiceCard = document.querySelector('[data-service="civil"]');
-    if (defaultServiceCard) {
-        defaultServiceCard.classList.add('active');
-        showDetailedServices('civil');
-        currentActiveService = 'civil';
-    }
+  const defaultServiceCard = document.querySelector('[data-service="civil"]');
+  if (defaultServiceCard) {
+    defaultServiceCard.classList.add("active");
+    showDetailedServices("civil");
+    currentActiveService = "civil";
+  }
 }
 
 // Add event listeners to service cards
-serviceCards.forEach(card => {
-    // Click event
-    card.addEventListener('click', function() {
-        const serviceType = this.getAttribute('data-service');
-        
-        if (currentActiveService === serviceType) {
-            // If clicking the same service, hide details
-            hideDetailedServices();
-        } else {
-            // Remove active class from all cards
-            serviceCards.forEach(c => c.classList.remove('active'));
-            
-            // Add active class to clicked card
-            this.classList.add('active');
-            
-            // Show detailed services
-            showDetailedServices(serviceType);
-            currentActiveService = serviceType;
-        }
-    });
+serviceCards.forEach((card) => {
+  // Click event
+  card.addEventListener("click", function () {
+    const serviceType = this.getAttribute("data-service");
 
-    // Hover effects for better UX
-    card.addEventListener('mouseenter', function() {
-        if (!this.classList.contains('active')) {
-            this.style.transform = 'translateY(-5px)';
-        }
-    });
+    if (currentActiveService === serviceType) {
+      // If clicking the same service, hide details
+      hideDetailedServices();
+    } else {
+      // Remove active class from all cards
+      serviceCards.forEach((c) => c.classList.remove("active"));
 
-    card.addEventListener('mouseleave', function() {
-        if (!this.classList.contains('active')) {
-            this.style.transform = 'translateY(0)';
-        }
-    });
+      // Add active class to clicked card
+      this.classList.add("active");
+
+      // Show detailed services
+      showDetailedServices(serviceType);
+      currentActiveService = serviceType;
+    }
+  });
+
+  // Hover effects for better UX
+  card.addEventListener("mouseenter", function () {
+    if (!this.classList.contains("active")) {
+      this.style.transform = "translateY(-5px)";
+    }
+  });
+
+  card.addEventListener("mouseleave", function () {
+    if (!this.classList.contains("active")) {
+      this.style.transform = "translateY(0)";
+    }
+  });
 });
 
 // Close detailed services when clicking outside
-document.addEventListener('click', function(event) {
-    if (!event.target.closest('.service-card') && 
-        !event.target.closest('.detailed-services')) {
-        hideDetailedServices();
-    }
+document.addEventListener("click", function (event) {
+  if (
+    !event.target.closest(".service-card") &&
+    !event.target.closest(".detailed-services")
+  ) {
+    hideDetailedServices();
+  }
 });
 
 // Keyboard navigation support
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        hideDetailedServices();
-    }
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    hideDetailedServices();
+  }
 });
 
 // Initial animation on page load
-window.addEventListener('load', function() {
-    serviceCards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        
+window.addEventListener("load", function () {
+  serviceCards.forEach((card, index) => {
+    card.style.opacity = "0";
+    card.style.transform = "translateY(30px)";
+
+    setTimeout(() => {
+      card.style.transition = "all 0.5s ease";
+      card.style.opacity = "1";
+      card.style.transform = "translateY(0)";
+
+      // Set default service after all animations complete
+      if (index === serviceCards.length - 1) {
         setTimeout(() => {
-            card.style.transition = 'all 0.5s ease';
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-            
-            // Set default service after all animations complete
-            if (index === serviceCards.length - 1) {
-                setTimeout(() => {
-                    setDefaultService();
-                }, 500);
-            }
-        }, index * 150);
-    });
+          setDefaultService();
+        }, 500);
+      }
+    }, index * 150);
+  });
 });
 
 // Navbar scroll functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const navbar = document.querySelector('.custom-navbar');
-    const scrollThreshold = window.innerHeight; // 100vh
-    
-    // Function to handle scroll
-    function handleScroll() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > scrollThreshold) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector(".custom-navbar");
+  const scrollThreshold = window.innerHeight; // 100vh
+
+  // Function to handle scroll
+  function handleScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > scrollThreshold) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
     }
-    
-    // Add scroll event listener with throttling for better performance
-    let scrollTimer = null;
-    window.addEventListener('scroll', function() {
-        if (scrollTimer) {
-            clearTimeout(scrollTimer);
-        }
-        
-        scrollTimer = setTimeout(function() {
-            handleScroll();
-        }, 10); // 10ms throttle
-    });
-    
-    // Handle initial state
+  }
+
+  // Add scroll event listener with throttling for better performance
+  let scrollTimer = null;
+  window.addEventListener("scroll", function () {
+    if (scrollTimer) {
+      clearTimeout(scrollTimer);
+    }
+
+    scrollTimer = setTimeout(function () {
+      handleScroll();
+    }, 10); // 10ms throttle
+  });
+
+  // Handle initial state
+  handleScroll();
+
+  // Handle window resize to recalculate 100vh
+  window.addEventListener("resize", function () {
     handleScroll();
-    
-    // Handle window resize to recalculate 100vh
-    window.addEventListener('resize', function() {
-        handleScroll();
-    });
-    
-    // Smooth scrolling for navbar links
-    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
-    navLinks.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                const navbarHeight = navbar.offsetHeight;
-                const targetPosition = targetSection.offsetTop - navbarHeight - 20;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-                
-                // Update active link
-                navLinks.forEach(function(navLink) {
-                    navLink.classList.remove('activepg');
-                });
-                this.classList.add('activepg');
-            }
-        });
-    });
-    
-    // Active link highlighting based on scroll position
-    function updateActiveLink() {
-        const sections = document.querySelectorAll('section[id]');
+  });
+
+  // Smooth scrolling for navbar links
+  const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+  navLinks.forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
+
+      if (targetSection) {
         const navbarHeight = navbar.offsetHeight;
-        const scrollPosition = window.pageYOffset + navbarHeight + 100;
-        
-        sections.forEach(function(section) {
-            const sectionTop = section.offsetTop;
-            const sectionBottom = sectionTop + section.offsetHeight;
-            const sectionId = section.getAttribute('id');
-            const correspondingNavLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-            
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                navLinks.forEach(function(link) {
-                    link.classList.remove('activepg');
-                });
-                if (correspondingNavLink) {
-                    correspondingNavLink.classList.add('activepg');
-                }
-            }
+        const targetPosition = targetSection.offsetTop - navbarHeight - 20;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth",
         });
-    }
-    
-    // Add scroll listener for active link updating
-    let activeTimer = null;
-    window.addEventListener('scroll', function() {
-        if (activeTimer) {
-            clearTimeout(activeTimer);
-        }
-        
-        activeTimer = setTimeout(function() {
-            updateActiveLink();
-        }, 50);
+
+        // Update active link
+        navLinks.forEach(function (navLink) {
+          navLink.classList.remove("activepg");
+        });
+        this.classList.add("activepg");
+      }
     });
+  });
+
+  // Active link highlighting based on scroll position
+  function updateActiveLink() {
+    const sections = document.querySelectorAll("section[id]");
+    const navbarHeight = navbar.offsetHeight;
+    const scrollPosition = window.pageYOffset + navbarHeight + 100;
+
+    sections.forEach(function (section) {
+      const sectionTop = section.offsetTop;
+      const sectionBottom = sectionTop + section.offsetHeight;
+      const sectionId = section.getAttribute("id");
+      const correspondingNavLink = document.querySelector(
+        `.nav-link[href="#${sectionId}"]`
+      );
+
+      if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+        navLinks.forEach(function (link) {
+          link.classList.remove("activepg");
+        });
+        if (correspondingNavLink) {
+          correspondingNavLink.classList.add("activepg");
+        }
+      }
+    });
+  }
+
+  // Add scroll listener for active link updating
+  let activeTimer = null;
+  window.addEventListener("scroll", function () {
+    if (activeTimer) {
+      clearTimeout(activeTimer);
+    }
+
+    activeTimer = setTimeout(function () {
+      updateActiveLink();
+    }, 50);
+  });
 });
+// ==============================================================================
 
 // Mobile menu functionality
 document.addEventListener("DOMContentLoaded", () => {
-    const offcanvasElement = document.getElementById("mobileMenu");
-    const bsOffcanvas = bootstrap.Offcanvas.getOrCreateInstance(offcanvasElement);
+  const offcanvasElement = document.getElementById("mobileMenu");
+  const bsOffcanvas = bootstrap.Offcanvas.getOrCreateInstance(offcanvasElement);
 
-    // كل الروابط جوا القائمة
-    const navLinks = offcanvasElement.querySelectorAll(".nav__link");
+  // كل الروابط جوا القائمة
+  const navLinks = offcanvasElement.querySelectorAll(".nav__link");
 
-    navLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            bsOffcanvas.hide(); // يقفل القائمة
-        });
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      bsOffcanvas.hide(); // يقفل القائمة
     });
+  });
 });
+
+// ==============================================================================
+  const timelineContent = {
+            future: {
+                title: "النمو والتوسع",
+                years: "يونيو 2025",
+                para: "خطط طموحة للتوسع في الأسواق الإقليمية والدولية. إطلاق مشاريع جديدة ومبتكرة في مجال التكنولوجيا والاستدامة. الاستثمار في حلول ذكية ومستدامة للمستقبل مع التركيز على الابتكار والتطوير المستمر."
+            },
+            growth: {
+                title: "النمو والتوسع",
+                years: "2021-2024",
+                para: "تنفيذ عدد من المشاريع في مجال البنية التحتية والتطوير العمراني في عدة مناطق داخل المملكة. اكتساب ثقة السوق من خلال الالتزام بالجودة والدقة بناء سمعة قوية في السوق المحلي والخليجي"
+            },
+            launch: {
+                title: "الانطلاق بهوية جديدة",
+                years: "2020",
+                para: "بداية رحلة جديدة مع هوية مؤسسية محدثة وواضحة. تأسيس الأسس القوية للعمل المؤسسي والتطوير المنهجي. وضع الخطط الاستراتيجية للنمو والتوسع في السنوات القادمة مع التركيز على الجودة والتميز."
+            }
+        };
+
+        // Get DOM elements - Desktop
+        const divRight = document.querySelector(".div-right");
+        const divCenter = document.querySelector(".div-center");
+        const divLeft = document.querySelector(".div-left");
+
+        // Get DOM elements - Mobile
+        const divUp = document.querySelector(".div-up");
+        const divMiddle = document.querySelector(".div-middle");
+        const divBottom = document.querySelector(".div-bottom");
+
+        // Common elements
+        const contentArea = document.querySelector(".content-area");
+        const contentTitle = document.getElementById("contentTitle");
+        const contentYears = document.getElementById("contentYears");
+        const contentPara = document.getElementById("contentPara");
+
+        // All timeline items
+        const desktopItems = [divRight, divCenter, divLeft];
+        const mobileItems = [divUp, divMiddle, divBottom];
+        const allItems = [...desktopItems, ...mobileItems];
+
+        // Function to update content with fade effect
+        function updateContent(period) {
+            const content = timelineContent[period];
+            
+            // Add fade effect
+            contentArea.classList.add("fade");
+            
+            setTimeout(() => {
+                // Update content
+                contentTitle.textContent = content.title;
+                contentYears.textContent = content.years;
+                contentPara.textContent = content.para;
+                
+                // Remove fade effect
+                contentArea.classList.remove("fade");
+            }, 250);
+        }
+
+        // Function to set active item (both desktop and mobile)
+        function setActiveItem(period) {
+            // Remove active class from all items
+            allItems.forEach(item => {
+                if (item) {
+                    item.classList.remove("active");
+                    item.classList.remove("timeline-item-active");
+                }
+            });
+            
+            // Add active class based on period
+            switch(period) {
+                case 'future':
+                    if (divRight) divRight.classList.add("active");
+                    if (divUp) divUp.classList.add("active");
+                    break;
+                case 'growth':
+                    if (divCenter) divCenter.classList.add("active");
+                    if (divMiddle) divMiddle.classList.add("active");
+                    break;
+                case 'launch':
+                    if (divLeft) divLeft.classList.add("active");
+                    if (divBottom) divBottom.classList.add("active");
+                    break;
+            }
+        }
+
+        // Function to add click animation
+        function addClickAnimation(item) {
+            if (!item) return;
+            item.style.transform = "scale(0.95)";
+            setTimeout(() => {
+                item.style.transform = "";
+            }, 150);
+        }
+
+        // Desktop event listeners
+        if (divRight) {
+            divRight.addEventListener("click", function() {
+                setActiveItem('future');
+                updateContent("future");
+                addClickAnimation(this);
+            });
+        }
+
+        if (divCenter) {
+            divCenter.addEventListener("click", function() {
+                setActiveItem('growth');
+                updateContent("growth");
+                addClickAnimation(this);
+            });
+        }
+
+        if (divLeft) {
+            divLeft.addEventListener("click", function() {
+                setActiveItem('launch');
+                updateContent("launch");
+                addClickAnimation(this);
+            });
+        }
+
+        // Mobile event listeners
+        if (divUp) {
+            divUp.addEventListener("click", function() {
+                setActiveItem('future');
+                updateContent("future");
+                addClickAnimation(this);
+            });
+        }
+
+        if (divMiddle) {
+            divMiddle.addEventListener("click", function() {
+                setActiveItem('growth');
+                updateContent("growth");
+                addClickAnimation(this);
+            });
+        }
+
+        if (divBottom) {
+            divBottom.addEventListener("click", function() {
+                setActiveItem('launch');
+                updateContent("launch");
+                addClickAnimation(this);
+            });
+        }
+
+        // Add hover effects for all items
+        allItems.forEach(item => {
+            if (!item) return;
+            
+            item.addEventListener("mouseenter", function() {
+                if (!this.classList.contains("active")) {
+                    /*this.style.backgroundColor = "rgba(185, 137, 102, 0)";*/
+                }
+            });
+
+            item.addEventListener("mouseleave", function() {
+                if (!this.classList.contains("active")) {
+                    this.style.backgroundColor = "";
+                }
+            });
+
+            // Touch support for mobile
+            item.addEventListener("touchstart", function() {
+                this.style.transform = "scale(0.98)";
+            });
+
+            item.addEventListener("touchend", function() {
+                this.style.transform = "";
+            });
+        });
+
+        // Swipe support for mobile
+        let startX = null;
+        let currentActiveIndex = 1; // Start with middle/center item
+        const periods = ['future', 'growth', 'launch'];
+
+        document.addEventListener('touchstart', function(e) {
+            startX = e.touches[0].clientX;
+        });
+
+        document.addEventListener('touchend', function(e) {
+            if (!startX) return;
+            
+            const endX = e.changedTouches[0].clientX;
+            const diffX = startX - endX;
+            
+            // Minimum swipe distance
+            if (Math.abs(diffX) > 50) {
+                if (diffX > 0 && currentActiveIndex < periods.length - 1) {
+                    // Swipe left - next item
+                    currentActiveIndex++;
+                } else if (diffX < 0 && currentActiveIndex > 0) {
+                    // Swipe right - previous item
+                    currentActiveIndex--;
+                }
+                
+                // Update active item and content
+                const period = periods[currentActiveIndex];
+                setActiveItem(period);
+                updateContent(period);
+                
+                // Add animation to mobile items
+                const mobileItem = mobileItems[currentActiveIndex];
+                if (mobileItem) {
+                    addClickAnimation(mobileItem);
+                }
+            }
+            
+            startX = null;
+        });
+
+        // Initialize with center/middle item active (growth period)
+        setActiveItem('growth');
+        updateContent("growth");
+
+ 
