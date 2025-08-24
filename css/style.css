@@ -242,7 +242,9 @@ nav.custom-navbar {
     box-shadow: 0 4px 12px rgba(197, 122, 56, 0.3);
     will-change: transform;
 }
-
+.swiper-button-prev,.swiper-button-next{
+    color: var(--secondry-color) !important;
+}
 .whats-button::before {
     content: "";
     position: absolute;
